@@ -1,0 +1,56 @@
+package agendador;
+
+import static java.lang.Integer.parseInt;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pichau
+ */
+public class Agendador {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        
+        ArrayList<String> lista = new ArrayList<String>();
+        lista.add("Ola");
+        for (int j = 0; j < 10; ) {
+        System.out.println("1- Ver tarefas \n"
+                + "2- Inserir \n3- Excluir \n4- Sair \n");
+        Scanner scan = new Scanner(System.in);
+        int x = parseInt(scan.nextLine());
+                 switch(x){
+            case 1:
+                for (int i = 0; i < lista.size(); i++) {
+            
+                System.out.println(lista.get(i));
+                }
+                System.out.println("\n");
+                break;
+                
+            case 2:
+                System.out.println("Digite uma tarefa para adicionar");
+                lista.add(scan.nextLine());
+                break;
+            case 3:
+                System.out.println("Digite uma tarefa para excluir");
+                lista.remove(scan.nextLine());
+                break;
+            case 4:
+                j=11;
+                break;
+            default:
+                System.out.println("Numero não valido.");
+        }
+        }
+   
+        
+    }
+    
+}
